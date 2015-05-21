@@ -17,6 +17,7 @@ libraryDependencies ++= {
     "io.spray" %% "spray-json" % sprayVersion
   )
 }
+
 // used only when "fork in run := true" but then passed parameters are ignored
 javaOptions in run ++= Seq(
   "-Xms512m", "-Xmx512m"
