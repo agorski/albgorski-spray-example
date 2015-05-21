@@ -17,9 +17,9 @@ libraryDependencies ++= {
     "io.spray" %% "spray-json" % sprayVersion
   )
 }
-
+// used only when "fork in run := true" but then passed parameters are ignored
 javaOptions in run ++= Seq(
-  "-Xms1024m", "-Xmx1024m"
+  "-Xms512m", "-Xmx512m"
 )
 
 // Assembly settings
@@ -27,4 +27,4 @@ mainClass in Global := Some("albgorski.spray.Main")
 
 assemblyJarName in assembly := s"${name.value}.jar"
 
-fork in run := true
+fork in run := false
